@@ -29,7 +29,7 @@ Score each source yourself as `uses / (tokens / 1000)`. In the video: S >= 100, 
 | Uses | tool calls (Skill, Agent, MCP tools) plus slash commands across all your logs, de-duplicated by tool-use id |
 | Hooks | a SessionStart hook runs every session by design, so its "uses" undercount it |
 
-To measure a real before/after, do what the video did: same app version, same folder, the same one-word prompt,
+To measure a real before/after, do what the video did: same app version, same folder, the same prompt asking for a one-word reply,
 three fresh sessions with a plugin on and three with it off, and compare each session's first request
 (`input_tokens + cache_creation_input_tokens + cache_read_input_tokens` in the log). Run-to-run noise was under
 30 tokens on one version; an app update can move the number by thousands, so never compare across versions.
